@@ -4,6 +4,7 @@ import Home from './features/Home';
 import About from './features/About';
 import Login from './features/Login';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Calculator from './features/Calculator';
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         <Route path='/' element={<><Header /><Outlet /><Footer /></>}>
           <Route path='/about' element={<About />} />
           <Route path='/Home' element={<Home />} />
+          <Route path='/Calculator' element={<Calculator />} />
         </Route>
          <Route path='*' element={<><HeaderLogin /><NotFound /><Footer /></>} />
       </Routes>
@@ -44,6 +46,7 @@ const Header = () => {
         <ul className='nav-links'>
           <Link to='/Home'>Home</Link>
           <Link to='/about'>About</Link>
+          <Link to='/Calculator'>Calculator</Link>
           <Link to='/'>Log Out</Link>
         </ul>
       </nav>
