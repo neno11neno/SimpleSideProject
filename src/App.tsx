@@ -4,7 +4,6 @@ import Home from './features/Home';
 import About from './features/About';
 import Login from './features/Login';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Calculator from './features/Calculator';
 
 
 const App = () => {
@@ -12,10 +11,9 @@ const App = () => {
     <Router>
       <Routes>
         <Route path='/' element={<><HeaderLogin /><Login /><Footer /></>} />
-        <Route path='/' element={<><Header /><Outlet /><Footer /></>}>
+        <Route element={<><Header /><Outlet /><Footer /></>}>
           <Route path='/about' element={<About />} />
           <Route path='/Home' element={<Home />} />
-          <Route path='/Calculator' element={<Calculator />} />
         </Route>
          <Route path='*' element={<><HeaderLogin /><NotFound /><Footer /></>} />
       </Routes>
